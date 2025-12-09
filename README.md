@@ -1,16 +1,86 @@
-## Hi there 👋
+# 👋 Hello, I'm Maher Kheder
 
-<!--
-**Maherkheder1/Maherkheder1** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**Laravel Backend Developer | RESTful API Specialist | Database Architect**
 
-Here are some ideas to get you started:
+I'm a passionate backend developer with over 4 years of experience in building scalable web applications using Laravel, RESTful APIs, and modern PHP practices. I focus on writing clean, maintainable code and designing efficient database systems that drive performance and user satisfaction.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## 🛠️ Technical Expertise
+
+### **Backend Development**
+- **PHP & Laravel** – Laravel 8–11, Eloquent ORM, Blade, Artisan
+- **API Development** – RESTful APIs, Sanctum Authentication, API Resources
+- **Database Design** – MySQL, PostgreSQL, Database Optimization, Indexing
+- **Performance** – Caching (Redis), Queue Jobs (Horizon), Query Optimization
+
+### **DevOps & Tools**
+- **Version Control** – Git, GitHub, GitFlow
+- **Testing** – PHPUnit, Pest
+- **Servers** – Linux (Ubuntu), Nginx, Apache
+- **Containers** – Docker, Docker Compose
+
+### **Frontend (Supportive)**
+- HTML5, CSS3, Bootstrap 5, JavaScript (ES6+)
+- DataTables, AJAX, Chart.js
+
+---
+
+## 🚀 Featured Projects
+
+### **[Laravel E-Commerce API](https://github.com/MaherKheder/laravel-ecommerce-api)**
+A fully-featured RESTful API for an e-commerce platform built with Laravel 11, featuring:
+- JWT Authentication & Role-Based Access Control
+- Product, Order, and Payment modules
+- PDF invoice generation
+- Dockerized environment
+- Postman documentation included
+
+### **[Admin Dashboard System](https://github.com/MaherKheder/admin-dashboard-laravel)**
+A dynamic admin panel with real-time analytics and CRUD operations:
+- Interactive charts with Chart.js
+- Export to Excel/PDF functionality
+- Activity logging and audit trails
+- Responsive Bootstrap 5 interface
+
+### **[Task Management API](https://github.com/MaherKheder/task-management-api)**
+A collaborative task management system with:
+- Real-time notifications
+- File attachments
+- Team collaboration features
+- Comprehensive API testing
+
+---
+
+## 📊 GitHub Stats
+
+![Maher's GitHub Stats](https://github-readme-stats.vercel.app/api?username=MaherKheder&show_icons=true&theme=radical)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MaherKheder&layout=compact&theme=radical)
+
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=MaherKheder&theme=radical)
+
+---
+
+## 🏆 Key Achievements
+
+- **Increased API performance by 40%** through query optimization and caching
+- **Reduced code errors by 20%** with rigorous testing and CI/CD pipelines
+- **Integrated 5+ RESTful APIs** that improved team efficiency and data flow
+- **Built 10+ production-ready applications** using Laravel and modern PHP practices
+
+---
+
+## 📫 Let's Connect
+
+- **Email:** Maher.h.kheder@gmail.com
+- **LinkedIn:** [linkedin.com/in/maher-kheder](https://www.linkedin.com/in/maher-kheder-026996357/)
+- **Portfolio:** [maherkheder.dev](https://maherkheder.dev) *(coming soon)*
+- **Phone:** +963938912686
+
+
+---
+
+> *"Clean code is not written by following rules; it's written by experience and constant refinement."*
+
+⭐ *Feel free to explore my repositories and reach out for collaboration!*
