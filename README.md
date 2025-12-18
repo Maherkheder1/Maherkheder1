@@ -52,15 +52,7 @@ A collaborative task management system with:
 
 ---
 
-## 📊 GitHub Stats
 
-![Maher's GitHub Stats](https://github-readme-stats.vercel.app/api?username=MaherKheder&show_icons=true&theme=radical)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MaherKheder&layout=compact&theme=radical)
-
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=MaherKheder&theme=radical)
-
----
 
 ## 🏆 Key Achievements
 
