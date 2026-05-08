@@ -3,8 +3,9 @@
 .home-hero__content-wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 5rem; /* Space between text and image */
+  /* تغيير من center إلى space-between لدفع العناصر للأطراف */
+  justify-content: space-between; 
+  gap: 5rem; 
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
@@ -20,7 +21,8 @@
 .home-hero__image-container {
   flex: 1;
   display: flex;
-  justify-content: center;
+  /* تغيير من center إلى flex-end لدفع الصورة لأقصى اليمين */
+  justify-content: flex-end; 
   align-items: center;
 }
 
@@ -28,12 +30,12 @@
 .home-hero__image {
   width: 100%;
   max-width: 380px; 
-  aspect-ratio: 1 / 1; /* Ensures a perfect square before rounding */
-  object-fit: cover; /* Prevents the image from stretching */
-  border-radius: 50%; /* Creates a perfect circle */
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* Soft, modern drop shadow */
-  border: 5px solid #ffffff; /* Clean white border around the image */
-  transition: transform 0.3s ease; /* Smooth animation for hover */
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  border: 5px solid #ffffff;
+  transition: transform 0.3s ease;
 }
 
 /* Subtle hover effect for the image */
@@ -44,9 +46,11 @@
 /* Responsive Design for Mobile and Tablets */
 @media screen and (max-width: 850px) {
   .home-hero__content-wrapper {
-    flex-direction: column-reverse; /* Puts text on bottom, image on top for mobile */
+    flex-direction: column-reverse;
     text-align: center;
     gap: 3rem;
+    /* إعادة التوسيط في الشاشات الصغيرة */
+    justify-content: center; 
   }
 
   .home-hero__content {
@@ -55,7 +59,12 @@
     align-items: center;
   }
 
+  .home-hero__image-container {
+    /* إعادة التوسيط في الشاشات الصغيرة */
+    justify-content: center; 
+  }
+
   .home-hero__image {
-    max-width: 280px; /* Slightly smaller image on mobile screens */
+    max-width: 280px;
   }
 }
