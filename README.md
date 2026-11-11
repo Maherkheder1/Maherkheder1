@@ -67,7 +67,7 @@ A collaborative task management system with:
 
 - **Email:** Maher.h.kheder@gmail.com
 - **LinkedIn:** [linkedin.com/in/maher-kheder](https://www.linkedin.com/in/maher-kheder-026996357/)
-- **Portfolio:** [maherkheder.dev](https://maherkheder.dev) *(coming soon)*
+- **Portfolio:** [maherkheder1.github.io/Maherkheder1/](https://maherkheder1.github.io/Maherkheder1/) 
 - **Phone:** +963938912686
 
 
