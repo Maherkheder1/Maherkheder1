@@ -1455,3 +1455,34 @@ textarea {
     padding-right: 0;
   }
 }
+
+/* =========================================
+   عكس ترتيب قسم المشاريع: النص يساراً والصورة يميناً
+   ========================================= */
+.projects__row {
+  grid-template-columns: 1fr 1.5fr;
+  align-items: center;
+}
+
+.projects__row-content {
+  order: 1;
+}
+
+.projects__row-img-cont {
+  order: 2;
+}
+
+/* الحفاظ على الصورة فوق النص في شاشات الموبايل والتابلت */
+@media only screen and (max-width: 56.25em) {
+  .projects__row {
+    grid-template-columns: 1fr;
+  }
+
+  .projects__row-img-cont {
+    order: 1;
+  }
+
+  .projects__row-content {
+    order: 2;
+  }
+}
