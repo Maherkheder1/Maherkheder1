@@ -1457,8 +1457,9 @@ textarea {
 }
 
 /* =========================================
-   عكس ترتيب قسم المشاريع: النص يساراً والصورة يميناً
+   تنسيق متبادل (Zig-Zag) لقسم المشاريع
    ========================================= */
+/* المشاريع الفردية (1، 3، 5): النص يساراً والصورة يميناً */
 .projects__row {
   grid-template-columns: 1fr 1.5fr;
   align-items: center;
@@ -1472,17 +1473,34 @@ textarea {
   order: 2;
 }
 
-/* الحفاظ على الصورة فوق النص في شاشات الموبايل والتابلت */
+/* المشاريع الزوجية (2، 4): الصورة يساراً والنص يميناً */
+#projects .projects__row:nth-child(even) {
+  grid-template-columns: 1.5fr 1fr;
+}
+
+#projects .projects__row:nth-child(even) .projects__row-img-cont {
+  order: 1;
+}
+
+#projects .projects__row:nth-child(even) .projects__row-content {
+  order: 2;
+}
+
+/* توحيد العرض على شاشات الموبايل والتابلت (الصورة دائماً فوق النص) */
 @media only screen and (max-width: 56.25em) {
-  .projects__row {
+
+  .projects__row,
+  #projects .projects__row:nth-child(even) {
     grid-template-columns: 1fr;
   }
 
-  .projects__row-img-cont {
+  .projects__row-img-cont,
+  #projects .projects__row:nth-child(even) .projects__row-img-cont {
     order: 1;
   }
 
-  .projects__row-content {
+  .projects__row-content,
+  #projects .projects__row:nth-child(even) .projects__row-content {
     order: 2;
   }
 }
