@@ -723,59 +723,245 @@
   </section>
 
   <!-- CONTACT SECTION -->
+  <!-- CONTACT SECTION -->
   <section id="contact" class="contact sec-pad dynamicBg">
     <div class="main-container">
       <h2 class="heading heading-sec heading-sec__mb-med">
-        <span class="heading-sec__main heading-sec__main--lt">Contact Me</span>
+        <span class="heading-sec__main heading-sec__main--lt">Let's Connect</span>
         <span class="heading-sec__sub heading-sec__sub--lt">
           Open to Remote, Hybrid, or Relocation opportunities across Europe and the Gulf in
           Laravel Backend, WordPress Development, and Junior DevOps / Deployment Engineering.
         </span>
       </h2>
-      <div class="contact__form-container">
-        <form action="https://formspree.io/f/myyqbvaw" method="POST" class="contact__form">
-          <div class="contact__form-field">
-            <label class="contact__form-label" for="name">Name</label>
-            <input required placeholder="Enter Your Name" type="text" class="contact__form-input" name="name"
-              id="name" />
-          </div>
-          <div class="contact__form-field">
-            <label class="contact__form-label" for="email">Email</label>
-            <input required placeholder="Enter Your Email" type="email" class="contact__form-input" name="email"
-              id="email" />
-          </div>
-          <div class="contact__form-field">
-            <label class="contact__form-label" for="message">Message</label>
-            <textarea required cols="30" rows="10" class="contact__form-input" placeholder="Enter Your Message"
-              name="message" id="message"></textarea>
-          </div>
-          <button type="submit" class="btn btn--theme contact__btn">
-            Send Message
-          </button>
-        </form>
 
-        <div class="contact__info">
-          <div class="contact__info-item">
-            <i class="fas fa-envelope contact__info-icon"></i>
-            <a href="mailto:maher.h.kheder@gmail.com">maher.h.kheder@gmail.com</a>
-          </div>
-          <div class="contact__info-item">
-            <i class="fas fa-phone contact__info-icon"></i>
-            <a href="tel:+963938912686">+963 938 912 686</a>
-          </div>
-          <div class="contact__info-item">
-            <i class="fab fa-linkedin contact__info-icon"></i>
-            <a href="https://www.linkedin.com/in/maher-h-kheder" target="_blank"
-              rel="noreferrer">linkedin.com/in/maher-h-kheder</a>
-          </div>
-          <div class="contact__info-item">
-            <i class="fas fa-map-marker-alt contact__info-icon"></i>
-            <span>Tartus, Syria | Open to Remote &amp; International Opportunities</span>
-          </div>
-        </div>
+      <!-- Live Availability Badge -->
+      <div class="contact__status-badge">
+        <span class="status-dot"></span>
+        <span>Available for Immediate Remote &amp; Relocation Opportunities</span>
       </div>
+
+      <!-- Modern Direct Contact Cards Grid -->
+      <div class="contact__cards-grid">
+
+        <!-- WhatsApp Card -->
+        <a href="https://wa.me/963945318996?text=Hi%20Maher,%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity."
+          target="_blank" rel="noreferrer" class="contact__card contact__card--whatsapp">
+          <div class="contact__card-icon">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <div class="contact__card-content">
+            <h3>Chat on WhatsApp</h3>
+            <p>Instant response &amp; direct discussion</p>
+            <span class="contact__card-action">+963 945 318 996 <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- Email Card -->
+        <a href="mailto:maher.h.kheder@gmail.com" class="contact__card contact__card--email">
+          <div class="contact__card-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact__card-content">
+            <h3>Send an Email</h3>
+            <p>For detailed proposals &amp; offers</p>
+            <span class="contact__card-action">maher.h.kheder@gmail.com <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- LinkedIn Card -->
+        <a href="https://www.linkedin.com/in/maher-h-kheder/" target="_blank" rel="noreferrer"
+          class="contact__card contact__card--linkedin">
+          <div class="contact__card-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+          <div class="contact__card-content">
+            <h3>Connect on LinkedIn</h3>
+            <p>Explore my career history &amp; network</p>
+            <span class="contact__card-action">View Profile <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Location Footer -->
+      <div class="contact__footer-note">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Tartus, Syria | Ready to relocate or work remotely worldwide</span>
+      </div>
+
     </div>
   </section>
+
+  <!-- CSS Styling for the Modern Contact Section -->
+  <style>
+    /* Status Badge Styling */
+    .contact__status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(40, 167, 69, 0.15);
+      color: #2ecc71;
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 4rem;
+      border: 1px solid rgba(46, 204, 113, 0.3);
+    }
+
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      background-color: #2ecc71;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #2ecc71;
+      animation: pulse-dot 2s infinite;
+    }
+
+    @keyframes pulse-dot {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7);
+      }
+
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(46, 204, 113, 0);
+      }
+
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+      }
+    }
+
+    /* Cards Grid */
+    .contact__cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 4rem;
+    }
+
+    /* Individual Card Styling */
+    .contact__card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 3rem 2.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact__card:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Card Icons */
+    .contact__card-icon {
+      font-size: 3.2rem;
+      padding: 1.5rem;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+    }
+
+    .contact__card--whatsapp .contact__card-icon {
+      background: rgba(37, 211, 102, 0.1);
+      color: #25d366;
+    }
+
+    .contact__card--email .contact__card-icon {
+      background: rgba(52, 152, 219, 0.1);
+      color: #3498db;
+    }
+
+    .contact__card--linkedin .contact__card-icon {
+      background: rgba(10, 102, 194, 0.1);
+      color: #0a66c2;
+    }
+
+    .contact__card:hover .contact__card-icon {
+      transform: scale(1.1);
+    }
+
+    /* Card Content */
+    .contact__card-content h3 {
+      font-size: 1.8rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .contact__card-content p {
+      font-size: 1.3rem;
+      color: #a0aec0;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact__card-action {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s ease;
+    }
+
+    .contact__card-action i {
+      font-size: 1.1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .contact__card:hover .contact__card-action i {
+      transform: translateX(5px);
+    }
+
+    .contact__card--whatsapp:hover .contact__card-action {
+      color: #25d366;
+    }
+
+    .contact__card--email:hover .contact__card-action {
+      color: #3498db;
+    }
+
+    .contact__card--linkedin:hover .contact__card-action {
+      color: #0a66c2;
+    }
+
+    /* Footer Location Note */
+    .contact__footer-note {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #a0aec0;
+      font-size: 1.4rem;
+      margin-top: 2rem;
+    }
+
+    .contact__footer-note i {
+      color: #e74c3c;
+    }
+
+    /* Responsive Design Adjustment */
+    @media (max-width: 768px) {
+      .contact__cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 
   <!-- FOOTER -->
   <footer class="main-footer">
