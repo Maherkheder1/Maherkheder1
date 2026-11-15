@@ -2052,3 +2052,171 @@ textarea {
     grid-template-columns: 1fr;
   }
 }
+/* ==========================================
+   GRADUATION & EDUCATION SECTION STYLING
+   ========================================== */
+.graduation-section {
+  background-color: #0b132b !important;
+  background-image: linear-gradient(135deg, #0b132b 0%, #070d1b 100%) !important;
+}
+
+.grad-content__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.grad-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 3.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+}
+
+.grad-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.grad-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.grad-icon {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.6rem;
+}
+
+.grad-icon.degree { background: rgba(59, 130, 246, 0.15); color: #3b82f6; }
+.grad-icon.project { background: rgba(46, 204, 113, 0.15); color: #2ecc71; }
+
+.grad-badge {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.grad-badge.grade {
+  color: #2ecc71;
+  background: rgba(46, 204, 113, 0.1);
+  border-color: rgba(46, 204, 113, 0.2);
+}
+
+.grad-card-title {
+  font-size: 2.1rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+
+.grad-card-subtitle {
+  font-size: 1.4rem;
+  color: #38bdf8;
+  font-weight: 600;
+  margin-bottom: 1.8rem;
+}
+
+.grad-card-desc {
+  font-size: 1.4rem;
+  color: #cbd5e1;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.grad-card-desc strong {
+  color: #ffffff;
+}
+
+.grad-card__footer-info {
+  margin-top: auto;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 1.3rem;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.grad-card__footer-info i {
+  color: #f59e0b;
+}
+
+/* Action Buttons inside Card */
+.grad-card__actions {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: auto;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.grad-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 11px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.grad-btn.primary {
+  background: #3b82f6;
+  color: #ffffff;
+  border: 1px solid #3b82f6;
+}
+
+.grad-btn.primary:hover {
+  background: #2563eb;
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+}
+
+.grad-btn.secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.grad-btn.secondary:hover {
+  background: rgba(255, 255, 255, 15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grad-content__grid {
+    grid-template-columns: 1fr;
+  }
+  .grad-card__actions {
+    flex-direction: column;
+  }
+}
