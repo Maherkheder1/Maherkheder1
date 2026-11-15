@@ -2528,3 +2528,248 @@ textarea {
   border-color: #38bdf8 !important;
   color: #ffffff !important;
 }
+/* ==========================================
+   ABOUT & SKILLS SECTION STYLING (Pro Edition)
+   ========================================== */
+.about-section {
+  background-color: #0b132b !important;
+  background-image: linear-gradient(135deg, #0b132b 0%, #070d1b 100%) !important;
+}
+
+.about__grid-layout {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-top: 4rem;
+}
+
+/* Profile Column & Photo Card */
+.about__profile-column {
+  position: sticky;
+  top: 3rem;
+}
+
+.about__photo-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease;
+}
+
+.about__photo-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.about__photo-wrapper {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+}
+
+.about__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.about__photo-card:hover .about__photo {
+  transform: scale(1.05);
+}
+
+/* Cinematic Gradient Overlay on Photo */
+.about__photo-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, #0b132b, transparent);
+}
+
+.about__photo-badge {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: rgba(46, 204, 113, 0.15);
+  color: #2ecc71;
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 50px;
+  border: 1px solid rgba(46, 204, 113, 0.3);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.about__quick-info {
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.about__quick-info h3 {
+  font-size: 2.2rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.about__role-text {
+  font-size: 1.4rem;
+  color: #38bdf8;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.about__location-text {
+  font-size: 1.25rem;
+  color: #94a3b8;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.about__location-text i {
+  color: #ef4444;
+}
+
+.about__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: #3b82f6;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+}
+
+.about__cta-btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* Content Column */
+.about__content-column {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.about__narrative-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 3.5rem;
+  backdrop-filter: blur(12px);
+}
+
+.about__content-title {
+  font-size: 2.2rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.about__content-details-para {
+  font-size: 1.45rem;
+  color: #cbd5e1;
+  line-height: 1.85;
+  margin-bottom: 1.8rem;
+}
+
+.about__content-details-para strong {
+  color: #ffffff;
+}
+
+.about__content-details-para:last-child {
+  margin-bottom: 0;
+}
+
+/* Skills Container Styling */
+.about__skills-container {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 3.5rem;
+  backdrop-filter: blur(12px);
+}
+
+.skill-category-group {
+  margin-bottom: 2.5rem;
+}
+
+.skill-category-group:last-child {
+  margin-bottom: 0;
+}
+
+.skill-group-title {
+  font-size: 1.6rem;
+  color: #38bdf8;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* High Contrast White Tech Tags */
+.tech-tag {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(56, 189, 248, 0.25) !important;
+  border-color: #38bdf8 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .about__grid-layout {
+    grid-template-columns: 1fr;
+  }
+  .about__profile-column {
+    position: static;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .about__narrative-box,
+  .about__skills-container {
+    padding: 2.2rem;
+  }
+}

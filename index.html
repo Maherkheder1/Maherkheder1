@@ -154,91 +154,119 @@
     </div>
   </section>
 
-  <!-- ABOUT & SKILLS SECTION -->
-  <section id="about" class="about sec-pad">
-    <div class="main-container">
-      <h2 class="heading heading-sec heading-sec__mb-med">
-        <span class="heading-sec__main">About Me</span>
-        <span class="heading-sec__sub">
-          Information Technology Engineer (EQF Level 6) bridging robust Backend &amp; WordPress development
-          with reliable Linux, Docker, and CI/CD deployment workflows
-        </span>
-      </h2>
-      <div class="about__content">
-        <div class="about__content-main">
-          <h3 class="about__content-title">Engineering Profile &amp; Career Focus</h3>
-          <div class="about__content-details">
-            <p class="about__content-details-para">
-              I'm <strong>Maher Kheder</strong>, a graduate in <strong>Information Technology Engineering (Software
-                Applications Development)</strong>
-              from the Syrian Virtual University. Over the past 4+ years, I have collaborated remotely with distributed
-              engineering teams in
-              <strong>Germany (DastN GmbH)</strong> and <strong>France (Relink Consulting)</strong> to architect
-              scalable web applications,
-              RESTful APIs, and custom CRM systems using <strong>Laravel, PHP, and MySQL</strong>.
-            </p>
-            <p class="about__content-details-para">
-              Alongside backend engineering, I specialize in <strong>Custom WordPress Development</strong>—building
-              bespoke themes,
-              custom PHP hooks/shortcodes, multilingual RTL/LTR architectures, automated transactional email pipelines,
-              and tailored booking systems
-              for European businesses such as <strong>AdmiBridge Paris</strong>.
-            </p>
-            <p class="about__content-details-para">
-              <strong>Transitioning into Deployment &amp; DevOps:</strong> Working on production systems taught me that
-              writing clean code
-              is only half the lifecycle. I am actively advancing my hands-on expertise in <strong>Linux server
-                administration, Docker containerization,
-                Nginx reverse proxies, and CI/CD automation</strong>. I am open to <strong>Laravel / WordPress
-                Developer</strong> roles as well as
-              <strong>Junior DevOps Engineer, DevOps Trainee, or Deployment/Infrastructure</strong> positions.
-            </p>
+<!-- ABOUT & SKILLS SECTION -->
+<section id="about" class="about-section sec-pad">
+  <div class="main-container">
+    <h2 class="heading-sec__main heading-sec__main--lt">
+      <span class="heading-sec__main">About Me</span>
+      <span class="heading-sec__sub">
+        Information Technology Engineer (EQF Level 6) bridging robust Backend &amp; WordPress development
+        with reliable Linux, Docker, and CI/CD deployment workflows
+      </span>
+    </h2>
+
+    <div class="about__grid-layout">
+      
+      <!-- Left Column: Personal Photo & Quick Bio Card -->
+      <div class="about__profile-column">
+        <div class="about__photo-card">
+          <div class="about__photo-wrapper">
+            <img src="./assets/jpeg/MyPhoto.jpg" alt="Maher Kheder - IT Engineer" class="about__photo" loading="lazy" />
+            <div class="about__photo-overlay"></div>
+            <div class="about__photo-badge">
+              <i class="fas fa-check-circle"></i> Available for Hire
+            </div>
           </div>
-          <a href="#contact" class="btn btn--med btn--theme dynamicBgClr">Contact Me</a>
-        </div>
-
-        <div class="about__content-skills">
-          <h3 class="about__content-title">Technical Stack</h3>
-
-          <h4 class="project-details__sub-title">Backend &amp; Databases</h4>
-          <div class="skills">
-            <div class="skills__skill">PHP 8+</div>
-            <div class="skills__skill">Laravel</div>
-            <div class="skills__skill">RESTful APIs</div>
-            <div class="skills__skill">MySQL</div>
-            <div class="skills__skill">PostgreSQL</div>
-            <div class="skills__skill">Eloquent ORM</div>
-            <div class="skills__skill">Redis</div>
-            <div class="skills__skill">CRM Architecture</div>
-          </div>
-
-          <h4 class="project-details__sub-title">WordPress &amp; Frontend</h4>
-          <div class="skills">
-            <div class="skills__skill">WordPress Core</div>
-            <div class="skills__skill">Custom PHP Hooks &amp; Shortcodes</div>
-            <div class="skills__skill">Amelia Booking</div>
-            <div class="skills__skill">Automated SMTP Emails</div>
-            <div class="skills__skill">Multilingual (RTL/LTR)</div>
-            <div class="skills__skill">JavaScript (ES6+)</div>
-            <div class="skills__skill">HTML5 / CSS3</div>
-            <div class="skills__skill">Bootstrap 5</div>
-          </div>
-
-          <h4 class="project-details__sub-title">DevOps, Linux &amp; Deployment (Growing Focus)</h4>
-          <div class="skills">
-            <div class="skills__skill">Linux Administration</div>
-            <div class="skills__skill">Docker &amp; Containers</div>
-            <div class="skills__skill">Nginx</div>
-            <div class="skills__skill">CI/CD Pipelines</div>
-            <div class="skills__skill">Git &amp; GitHub Actions</div>
-            <div class="skills__skill">Server Deployment</div>
-            <div class="skills__skill">Networking Fundamentals</div>
-            <div class="skills__skill">Postman &amp; QA Testing</div>
+          <div class="about__quick-info">
+            <h3>Maher Kheder</h3>
+            <p class="about__role-text">Software &amp; DevOps Engineer</p>
+            <p class="about__location-text"><i class="fas fa-map-marker-alt"></i> Tartus, Syria | Remote across Europe &amp; Gulf</p>
+            <a href="#contact" class="about__cta-btn">Let's Connect <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
+
+      <!-- Right Column: Engineering Profile & Detailed Skills -->
+      <div class="about__content-column">
+        
+        <!-- Profile Details -->
+        <div class="about__narrative-box">
+          <h3 class="about__content-title">Engineering Profile &amp; Career Focus</h3>
+          <p class="about__content-details-para">
+            I'm <strong>Maher Kheder</strong>, a graduate in <strong>Information Technology Engineering (Software Applications Development)</strong>
+            from the Syrian Virtual University. Over the past 4+ years, I have collaborated remotely with distributed engineering teams in
+            <strong>Germany (DastN GmbH)</strong> and <strong>France (Relink Consulting)</strong> to architect scalable web applications,
+            RESTful APIs, and custom CRM systems using <strong>Laravel, PHP, and MySQL</strong>.
+          </p>
+          <p class="about__content-details-para">
+            Alongside backend engineering, I specialize in <strong>Custom WordPress Development</strong>—building bespoke themes,
+            custom PHP hooks/shortcodes, multilingual RTL/LTR architectures, automated transactional email pipelines,
+            and tailored booking systems for European businesses such as <strong>AdmiBridge Paris</strong>.
+          </p>
+          <p class="about__content-details-para">
+            <strong>Transitioning into Deployment &amp; DevOps:</strong> Working on production systems taught me that writing clean code
+            is only half the lifecycle. I am actively advancing my hands-on expertise in <strong>Linux server administration, Docker containerization,
+            Nginx reverse proxies, and CI/CD automation</strong>. Open to <strong>Laravel / WordPress Developer</strong> roles as well as
+            <strong>Junior DevOps Engineer, DevOps Trainee, or Deployment/Infrastructure</strong> positions.
+          </p>
+        </div>
+
+        <!-- Technical Stack Categorized -->
+        <div class="about__skills-container">
+          <h3 class="about__content-title" style="margin-top: 3rem;">Technical Stack</h3>
+
+          <!-- Backend & Databases -->
+          <div class="skill-category-group">
+            <h4 class="skill-group-title"><i class="fas fa-server"></i> Backend &amp; Databases</h4>
+            <div class="skills">
+              <div class="skills__skill tech-tag">PHP 8+</div>
+              <div class="skills__skill tech-tag">Laravel</div>
+              <div class="skills__skill tech-tag">RESTful APIs</div>
+              <div class="skills__skill tech-tag">MySQL</div>
+              <div class="skills__skill tech-tag">PostgreSQL</div>
+              <div class="skills__skill tech-tag">Eloquent ORM</div>
+              <div class="skills__skill tech-tag">Redis</div>
+              <div class="skills__skill tech-tag">CRM Architecture</div>
+            </div>
+          </div>
+
+          <!-- WordPress & Frontend -->
+          <div class="skill-category-group">
+            <h4 class="skill-group-title"><i class="fas fa-laptop-code"></i> WordPress &amp; Frontend</h4>
+            <div class="skills">
+              <div class="skills__skill tech-tag">WordPress Core</div>
+              <div class="skills__skill tech-tag">Custom PHP Hooks &amp; Shortcodes</div>
+              <div class="skills__skill tech-tag">Amelia Booking</div>
+              <div class="skills__skill tech-tag">Automated SMTP Emails</div>
+              <div class="skills__skill tech-tag">Multilingual (RTL/LTR)</div>
+              <div class="skills__skill tech-tag">JavaScript (ES6+)</div>
+              <div class="skills__skill tech-tag">HTML5 / CSS3</div>
+              <div class="skills__skill tech-tag">Bootstrap 5</div>
+            </div>
+          </div>
+
+          <!-- DevOps & Deployment -->
+          <div class="skill-category-group">
+            <h4 class="skill-group-title"><i class="fas fa-cogs"></i> DevOps, Linux &amp; Deployment</h4>
+            <div class="skills">
+              <div class="skills__skill tech-tag">Linux Administration</div>
+              <div class="skills__skill tech-tag">Docker &amp; Containers</div>
+              <div class="skills__skill tech-tag">Nginx</div>
+              <div class="skills__skill tech-tag">CI/CD Pipelines</div>
+              <div class="skills__skill tech-tag">Git &amp; GitHub Actions</div>
+              <div class="skills__skill tech-tag">Server Deployment</div>
+              <div class="skills__skill tech-tag">Networking Fundamentals</div>
+              <div class="skills__skill tech-tag">Postman &amp; QA Testing</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
 <!-- WORK EXPERIENCE SECTION (EUROPEAN STANDARD) -->
 <section id="experience" class="experience-section sec-pad">
