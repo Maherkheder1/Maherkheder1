@@ -875,89 +875,146 @@ textarea {
   border-bottom: 0
 }
 
+/* ==========================================
+   MODERN PROFESSIONAL FOOTER STYLING
+   ========================================== */
 .main-footer {
-  background: #000;
-  color: #fff
+  background: #070d1b; /* متناسق تماماً مع خلفية قسم التواصل */
+  background-image: linear-gradient(135deg, #070d1b 0%, #0b132b 100%);
+  color: #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.main-footer .main-container {
+  max-width: 120rem;
+  margin: auto;
+  padding: 0 5rem;
 }
 
 .main-footer__upper {
   display: flex;
   justify-content: space-between;
-  padding: 8rem 0
+  align-items: center;
+  padding: 6rem 0 5rem 0;
+  gap: 4rem;
 }
 
-@media only screen and (max-width: 56.25em) {
-  .main-footer__upper {
-    padding: 6rem 0
-  }
-}
-
-@media only screen and (max-width: 37.5em) {
-  .main-footer__upper {
-    display: block
-  }
-}
-
-.main-footer__row-1 {
-  order: 2
-}
-
-@media only screen and (max-width: 56.25em) {
-  .main-footer__row-1 {
-    margin-bottom: 5rem
-  }
-}
-
+/* Brand Section */
 .main-footer__row-2 {
-  width: 40%;
-  order: 1;
-  max-width: 50rem
+  width: 50%;
+  max-width: 55rem;
 }
 
-@media only screen and (max-width: 56.25em) {
-  .main-footer__row-2 {
-    width: 100%
-  }
+.main-footer__brand-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #fff, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .main-footer__short-desc {
-  margin-top: 2rem;
-  color: #eee;
-  font-size: 1.5rem;
-  line-height: 1.7
+  color: #94a3b8;
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+
+/* Social & Actions Section */
+.main-footer__row-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.main-footer__heading-sm {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
 }
 
 .main-footer__social-cont {
-  margin-top: 2rem
+  display: flex;
+  gap: 1.5rem;
 }
 
-.main-footer__icon {
-  margin-right: 1rem;
-  width: 2.5rem
+/* Modern Interactive Social Buttons */
+.main-footer__social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 1.8rem;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  text-decoration: none;
+  backdrop-filter: blur(10px);
 }
 
-.main-footer__icon--mr-none {
-  margin-right: 0
+.main-footer__social-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Specific Hover Glows for Buttons */
+.main-footer__social-btn.linkedin:hover {
+  background: rgba(10, 102, 194, 0.2);
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.main-footer__social-btn.github:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.main-footer__social-btn.email:hover {
+  background: rgba(52, 152, 219, 0.2);
+  border-color: #3498db;
+  color: #3498db;
+}
+
+.main-footer__social-btn.cv:hover {
+  background: rgba(46, 204, 113, 0.2);
+  border-color: #2ecc71;
+  color: #2ecc71;
+}
+
+/* Lower Footer Copyright */
 .main-footer__lower {
-  padding: 4rem 0;
-  border-top: 1px solid #444;
-  color: #eee;
-  font-size: 1.2rem;
-  text-align: left;
-  text-align: center
+  padding: 2.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: #64748b;
+  font-size: 1.3rem;
+  text-align: center;
 }
 
-.main-footer__lower a {
-  text-decoration: underline;
-  font-weight: bold;
-  margin-left: 2px
-}
-
+/* Responsive Design */
 @media only screen and (max-width: 56.25em) {
-  .main-footer__lower {
-    padding: 3.5rem 0
+  .main-footer__upper {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4rem 0;
+  }
+
+  .main-footer__row-2 {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .main-footer__row-1 {
+    align-items: flex-start;
+    margin-top: 2rem;
   }
 }
 

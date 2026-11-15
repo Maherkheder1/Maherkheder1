@@ -791,44 +791,51 @@
   </div>
 </section>
 
-  <!-- FOOTER -->
-  <footer class="main-footer">
-    <div class="main-container">
-      <div class="main-footer__upper">
-        <div class="main-footer__row main-footer__row-1">
-          <h2 class="heading heading-sm main-footer__heading-sm">
-            <span>Social</span>
-          </h2>
-          <div class="main-footer__social-cont">
-            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/maher-h-kheder">
-              <img class="main-footer__icon" src="./assets/png/linkedin-ico.png" alt="LinkedIn icon" />
-            </a>
-            <a target="_blank" rel="noreferrer" href="https://github.com/Maherkheder1">
-              <img class="main-footer__icon" src="./assets/png/github-ico.png" alt="GitHub icon" />
-            </a>
-            <a target="_blank" rel="noreferrer" href="mailto:maher.h.kheder@gmail.com">
-              <img class="main-footer__icon" src="./assets/png/email-ico.png" alt="Email icon" />
-            </a>
-            <a href="./assets/files/MKhederResume.pdf" download class="main-footer__icon-link">
-              <img class="main-footer__icon" src="./assets/png/cv-ico.png" alt="CV Download icon" />
-            </a>
-          </div>
-        </div>
-        <div class="main-footer__row main-footer__row-2">
-          <h4 class="heading heading-sm text-lt">MAHER KHEDER</h4>
-          <p class="main-footer__short-desc">
-            Laravel &amp; WordPress Developer | Linux, Docker &amp; CI/CD Enthusiast — Building reliable web
-            applications and streamlined deployment pipelines.
-          </p>
+<!-- MAIN FOOTER -->
+<footer class="main-footer">
+  <div class="main-container">
+    <div class="main-footer__upper">
+      
+      <!-- Row 2: Brand & Description (Moved to left for better reading hierarchy) -->
+      <div class="main-footer__row main-footer__row-2">
+        <h4 class="main-footer__brand-title">MAHER KHEDER</h4>
+        <p class="main-footer__short-desc">
+          Laravel &amp; WordPress Developer | Linux, Docker &amp; CI/CD Enthusiast — Building reliable web
+          applications and streamlined deployment pipelines.
+        </p>
+      </div>
+
+      <!-- Row 1: Social Links & CV -->
+      <div class="main-footer__row main-footer__row-1">
+        <h3 class="main-footer__heading-sm">Let's Stay Connected</h3>
+        <div class="main-footer__social-cont">
+          <!-- LinkedIn -->
+          <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/maher-h-kheder" class="main-footer__social-btn linkedin" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <!-- GitHub -->
+          <a target="_blank" rel="noreferrer" href="https://github.com/Maherkheder1" class="main-footer__social-btn github" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <!-- Email -->
+          <a target="_blank" rel="noreferrer" href="mailto:maher.h.kheder@gmail.com" class="main-footer__social-btn email" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <!-- CV Download -->
+          <a href="./assets/files/MKhederResume.pdf" download class="main-footer__social-btn cv" title="Download CV">
+            <i class="fas fa-file-download"></i>
+          </a>
         </div>
       </div>
 
-      <div class="main-footer__lower">
-        &copy; Copyright 2026. Made by
-        <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/maher-h-kheder">MAHER KHEDER</a>
-      </div>
     </div>
-  </footer>
+
+    <!-- Lower Footer -->
+    <div class="main-footer__lower">
+      <p>&copy; 2026 Maher Kheder. Crafted with passion and code.</p>
+    </div>
+  </div>
+</footer>
 
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
