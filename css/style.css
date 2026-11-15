@@ -2398,3 +2398,116 @@ textarea {
     padding: 2.4rem;
   }
 }
+/* ==========================================
+   WORK EXPERIENCE SECTION (European Standard)
+   ========================================== */
+.experience-section {
+  background-color: #070d1b !important;
+  background-image: linear-gradient(135deg, #070d1b 0%, #0b132b 100%) !important;
+}
+
+/* Timeline Container & Vertical Line */
+.timeline {
+  position: relative;
+  max-width: 100rem;
+  margin: 4rem auto 0 auto;
+  padding-left: 3rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  bottom: 1rem;
+  width: 2px;
+  background: linear-gradient(to bottom, #3b82f6, rgba(59, 130, 246, 0.1));
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  margin-bottom: 4.5rem;
+  padding-left: 2.5rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -3.5rem;
+  top: 0.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: #3b82f6;
+  border: 3px solid #0b132b;
+  box-shadow: 0 0 10px #3b82f6;
+}
+
+/* Date Badge styling */
+.timeline-date-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+.timeline-date-badge i {
+  font-size: 1.1rem;
+}
+
+/* Timeline Content Card */
+.timeline-content {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 3rem;
+  backdrop-filter: blur(12px);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(56, 189, 248, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.timeline-content h4 {
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  line-height: 1.35;
+}
+
+.timeline-content p {
+  font-size: 1.4rem;
+  color: #cbd5e1;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 56.25em) {
+  .timeline {
+    padding-left: 2rem;
+  }
+  .timeline-item {
+    padding-left: 1.5rem;
+  }
+  .timeline-item::before {
+    left: -2.5rem;
+  }
+  .timeline-content {
+    padding: 2.2rem;
+  }
+}
