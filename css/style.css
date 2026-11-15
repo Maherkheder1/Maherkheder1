@@ -2511,3 +2511,20 @@ textarea {
     padding: 2.2rem;
   }
 }
+/* Update Tech Tags styling for maximum contrast & white text */
+.tech-tag {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #ffffff !important; /* لون أبيض ناصع وواضحة جداً */
+  background: rgba(255, 255, 255, 0.08) !important; /* خلفية أفتح قليلاً لزيادة التباين */
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  padding: 5px 12px;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(56, 189, 248, 0.2) !important;
+  border-color: #38bdf8 !important;
+  color: #ffffff !important;
+}
