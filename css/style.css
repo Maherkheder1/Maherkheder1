@@ -963,3 +963,264 @@ textarea { resize: none; }
     align-items: flex-start !important;
   }
 }
+/* ==========================================
+   13. PROJECT CASE STUDIES & RESPONSIVE UI POLISH
+   ========================================== */
+
+/* Project Hero Section */
+.project-cs-hero {
+  padding: 16rem 0 8rem 0;
+  background-color: var(--bg-primary);
+  background-image: var(--bg-gradient-1);
+  text-align: center;
+  position: relative;
+}
+
+.project-cs-hero__content {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.project-cs-hero .heading-primary {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-main);
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.project-cs-hero__info .text-primary {
+  font-size: 1.8rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .project-cs-hero { padding: 12rem 0 5rem 0; }
+  .project-cs-hero .heading-primary { font-size: 2.8rem; letter-spacing: 1px; }
+  .project-cs-hero__info .text-primary { font-size: 1.45rem; }
+}
+
+/* Project Details Main Container */
+.project-details {
+  padding: 8rem 0;
+  background-color: var(--bg-secondary);
+  background-image: var(--bg-gradient-2);
+}
+
+.project-details__content {
+  max-width: 1050px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 5rem;
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-card);
+}
+
+@media only screen and (max-width: 56.25em) {
+  .project-details { padding: 4rem 0; }
+  .project-details__content { padding: 2rem 1.5rem; border-radius: 12px; }
+}
+
+/* Showcase Images */
+.project-details__showcase-img-cont {
+  width: 100%;
+  margin-bottom: 4rem;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  background: var(--bg-primary);
+}
+
+.project-details__showcase-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.project-details__showcase-img:hover {
+  transform: scale(1.02);
+}
+
+/* Typography & Titles */
+.project-details__content-title {
+  font-size: 2.4rem;
+  color: var(--text-main);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--card-border);
+}
+
+.project-details__sub-title {
+  font-size: 1.8rem;
+  color: var(--accent-blue);
+  font-weight: 600;
+  margin: 2.5rem 0 1.5rem 0;
+}
+
+.project-details__desc-para {
+  font-size: 1.55rem;
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin-bottom: 2rem;
+}
+
+.project-details__desc-para strong {
+  color: var(--text-main);
+}
+
+/* Feature Grid (for CRM & complex projects) */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.feature-item {
+  background: var(--bg-primary);
+  border: 1px solid var(--card-border);
+  padding: 2.5rem;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-blue);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+  font-size: 2.8rem;
+  color: var(--accent-blue);
+  margin-bottom: 1.5rem;
+}
+
+.feature-item h5 {
+  font-size: 1.7rem;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.feature-item p {
+  font-size: 1.35rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Architecture Diagram */
+.architecture-diagram {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin: 2.5rem 0 3.5rem 0;
+}
+
+.arch-layer {
+  background: var(--bg-primary);
+  border: 1px solid var(--card-border);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.arch-layer h4 {
+  font-size: 1.5rem;
+  color: var(--accent-blue);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.arch-layer p {
+  font-size: 1.3rem;
+  color: var(--text-muted);
+}
+
+/* Achievements & Bullet Lists */
+.achievements-list {
+  list-style: none;
+  margin: 2rem 0;
+}
+
+.achievements-list li {
+  font-size: 1.45rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.achievements-list li i {
+  color: #2ecc71;
+  margin-top: 4px;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.achievements-list li strong {
+  color: var(--text-main);
+}
+
+/* Footer Social Icons Strict Fix (Mobile & Desktop) */
+.main-footer__social-cont {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.main-footer__social-cont a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 12px;
+  background: var(--tag-bg);
+  border: 1px solid var(--tag-border);
+  transition: all 0.3s ease;
+}
+
+.main-footer__icon {
+  width: 2.2rem !important;
+  height: 2.2rem !important;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.main-footer__social-cont a:hover {
+  transform: translateY(-4px);
+  background: var(--primary-btn);
+  border-color: var(--primary-btn);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+.main-footer__social-cont a:hover .main-footer__icon {
+  filter: brightness(100);
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 56.25em) {
+  .main-footer__upper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+  .main-footer__row-1 {
+    align-items: flex-start !important;
+  }
+}
