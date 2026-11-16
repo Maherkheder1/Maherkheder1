@@ -33,14 +33,15 @@
 }
 
 [data-theme="light"] {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8fafc;
-  --bg-gradient-1: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
-  --bg-gradient-2: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  /* معايير الـ Light Mode الحقيقية: خلفيات فاتحة بالكامل بدون أي لون غامق */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-gradient-1: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  --bg-gradient-2: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
   --header-bg: rgba(255, 255, 255, 0.92);
   --card-bg: #ffffff;
   --card-hover-bg: #f8fafc;
-  --card-border: rgba(15, 23, 42, 0.1);
+  --card-border: rgba(15, 23, 42, 0.08);
   --text-main: #0f172a;
   --text-muted: #334155;
   --text-subtle: #64748b;
@@ -48,7 +49,7 @@
   --primary-btn: #2563eb;
   --tag-bg: #f1f5f9;
   --tag-border: #cbd5e1;
-  --shadow-card: 0 15px 35px rgba(15, 23, 42, 0.08);
+  --shadow-card: 0 10px 25px rgba(15, 23, 42, 0.05);
 }
 
 /* تسريع الرندر للأقسام السفلية (Performance Boost) */
@@ -85,7 +86,7 @@ section:not(.home-hero) {
   transform: rotate(15deg) scale(1.05);
 }
 
-/* ربط الأقسام والبطاقات بالمتغيرات الديناميكية */
+/* ربط الأقسام والبطاقات بالمتغيرات الديناميكية لتتغير بالكامل بين الوضعين */
 body {
   background-color: var(--bg-primary);
   color: var(--text-main);
@@ -120,24 +121,21 @@ body {
   background: var(--bg-secondary) !important;
 }
 
+/* تطبيق الخلفيات الفاتحة على كل الأقسام في الـ Light Mode */
 .home-hero,
 .about-section,
 .projects-section,
 .graduation-section,
-.certificates-section {
-  background-color: var(--bg-primary) !important;
-  background-image: var(--bg-gradient-1) !important;
-}
-
+.certificates-section,
 .experience-section,
 .recommendations-section,
 .contact.dynamicBg,
 .main-footer {
-  background-color: var(--bg-secondary) !important;
-  background-image: var(--bg-gradient-2) !important;
+  background-color: var(--bg-primary) !important;
+  background-image: var(--bg-gradient-1) !important;
 }
 
-/* ضمان أن كل العناوين الرئيسية والفرعية تصبح داكنة وواضحة في الـ Light Mode */
+/* ضمان أن العناوين والنصوص تتكيف تماماً لتكون واضحة وغامقة في الوضع الفاتح */
 .heading-sec__main,
 .home-hero .heading-primary,
 .about__quick-info h3,
