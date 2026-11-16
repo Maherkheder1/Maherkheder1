@@ -281,29 +281,66 @@ textarea { resize: none; }
 }
 .home-hero__image:hover { transform: translateY(-5px); }
 
+/* ==========================================
+   HOME HERO SOCIAL SIDEBAR (Ultra Professional)
+   ========================================== */
 .home-hero__socials {
-  position: absolute; top: 50%; left: 0; transform: translateY(-50%);
-  border-radius: 0 8px 8px 0; background: var(--card-bg);
-  backdrop-filter: blur(4px); border: 1px solid var(--card-border); border-left: none;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border-radius: 0 12px 12px 0;
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-left: none;
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  z-index: 10;
 }
-.home-hero__social { width: 5rem; }
-.home-hero__social-icon-link { width: 100%; display: block; padding: 1.2rem; border-bottom: 1px solid var(--card-border); transition: background .3s; }
-.home-hero__social:last-child .home-hero__social-icon-link { border-bottom: none; }
-.home-hero__social-icon-link:hover { background: var(--card-hover-bg); }
-.home-hero__social-icon-link img { transition: transform 0.3s ease; width: 100%; }
-[data-theme="light"] .home-hero__social-icon-link img { filter: brightness(0.2); }
-.home-hero__social-icon-link:hover img { transform: translateY(-3px); }
 
-.home-hero__mouse-scroll-cont { position: absolute; bottom: 3%; left: 50%; transform: translateX(-50%); }
-.mouse { width: 25px; height: 40px; border: 2px solid var(--text-subtle); border-radius: 60px; position: relative; overflow: hidden; }
-.mouse::before { content: ''; width: 5px; height: 5px; position: absolute; top: 7px; left: 50%; transform: translateX(-50%); background-color: var(--text-main); border-radius: 50%; animation: wheel 1.3s infinite; }
-@keyframes wheel { to { opacity: 0; top: 27px; } }
+.home-hero__social {
+  width: 4.8rem;
+}
 
-@media (max-width: 900px) {
-  .home-hero__content-wrapper { flex-direction: column-reverse; text-align: center; gap: 3rem; padding-left: 2rem; }
-  .home-hero__content, .home-hero .heading-primary, .home-hero .text-primary, .home-hero__cta { text-align: center; }
-  .home-hero__image-container { justify-content: center; }
-  .home-hero__socials { display: none; }
+.home-hero__social-icon-link {
+  width: 100%;
+  height: 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 1.8rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--card-border);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.home-hero__social:last-child .home-hero__social-icon-link {
+  border-bottom: none;
+}
+
+.home-hero__social-icon-link:hover {
+  background: var(--primary-btn);
+  color: #ffffff;
+  padding-left: 4px; /* تأثير حركة خفيف وجذاب نحو اليسار */
+}
+
+/* في حال كنت تستخدم صور png للأيقونات بدلاً من الفونت أوسم، هذا الكود يعالجها بنقاء تامة */
+.home-hero__social-icon-link img {
+  width: 2.2rem;
+  height: 2.2rem;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] .home-hero__social-icon-link img {
+  filter: brightness(0.1) contrast(1.2); /* تكييف نظيف للصور في الوضع الفاتح بدون مربعات سوداء */
+}
+
+.home-hero__social-icon-link:hover img {
+  filter: brightness(100); /* تصبح بيضاء نقية عند تحويم الماوس */
+  transform: scale(1.1);
 }
 
 /* ==========================================
