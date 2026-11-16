@@ -971,7 +971,7 @@ textarea { resize: none; }
 .project-details__tools-used .skills__skill,
 .project-details__tools-used .skills div,
 .skills__skill {
-  font-size: 1.2rem !important;
+  font-size: 2rem !important;
   font-weight: 600 !important;
   color: var(--text-main) !important;
   background: var(--tag-bg) !important;
