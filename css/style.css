@@ -9,7 +9,221 @@
   box-sizing: inherit;
   font-family: inherit;
 }
+/* ==========================================
+   THEME VARIABLES (DARK & LIGHT MODE)
+   ========================================== */
+:root,
+[data-theme="dark"] {
+  --bg-primary: #0b132b;
+  --bg-secondary: #070d1b;
+  --bg-gradient-1: linear-gradient(135deg, #0b132b 0%, #070d1b 100%);
+  --bg-gradient-2: linear-gradient(135deg, #070d1b 0%, #0b132b 100%);
+  --header-bg: rgba(7, 13, 27, 0.85);
+  --card-bg: rgba(255, 255, 255, 0.04);
+  --card-hover-bg: rgba(255, 255, 255, 0.07);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --text-main: #ffffff;
+  --text-muted: #cbd5e1;
+  --text-subtle: #94a3b8;
+  --accent-blue: #38bdf8;
+  --primary-btn: #3b82f6;
+  --tag-bg: rgba(255, 255, 255, 0.07);
+  --tag-border: rgba(255, 255, 255, 0.15);
+  --shadow-card: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
 
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-gradient-1: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  --bg-gradient-2: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --card-bg: #ffffff;
+  --card-hover-bg: #ffffff;
+  --card-border: rgba(15, 23, 42, 0.09);
+  --text-main: #0f172a;
+  --text-muted: #334155;
+  --text-subtle: #64748b;
+  --accent-blue: #0284c7;
+  --primary-btn: #2563eb;
+  --tag-bg: #f1f5f9;
+  --tag-border: #cbd5e1;
+  --shadow-card: 0 12px 30px rgba(15, 23, 42, 0.07);
+}
+
+/* تسريع الرندر للأقسام السفلية (Performance Boost) */
+section:not(.home-hero) {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 800px;
+}
+
+/* تنسيق زر التبديل في الهيدر */
+.header__main {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.theme-toggle-btn {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--text-main);
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+  transform: rotate(15deg) scale(1.05);
+}
+
+/* ربط الأقسام والبطاقات بالمتغيرات لتعمل بسلاسة في الوضعين */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header {
+  background: var(--header-bg) !important;
+  border-bottom: 1px solid var(--card-border) !important;
+}
+
+.header__logo-sub,
+.header__sm-menu-link a {
+  color: var(--text-main) !important;
+}
+
+.header__link {
+  color: var(--text-muted) !important;
+}
+
+.header__link:hover,
+.header__sm-menu-link a:hover {
+  color: var(--accent-blue) !important;
+}
+
+[data-theme="light"] .header__main-ham-menu,
+[data-theme="light"] .header__main-ham-menu-close {
+  filter: invert(0);
+}
+
+.header__sm-menu {
+  background: var(--bg-secondary) !important;
+}
+
+.home-hero,
+.about-section,
+.projects-section,
+.graduation-section,
+.certificates-section {
+  background-color: var(--bg-primary) !important;
+  background-image: var(--bg-gradient-1) !important;
+}
+
+.experience-section,
+.recommendations-section,
+.contact.dynamicBg,
+.main-footer {
+  background-color: var(--bg-secondary) !important;
+  background-image: var(--bg-gradient-2) !important;
+}
+
+.heading-sec__main,
+.home-hero .heading-primary,
+.about__quick-info h3,
+.about__content-title,
+.timeline-content h4,
+.project__title,
+.grad-card-title,
+.rec-category-title,
+.rec-title,
+.certificate__title,
+.contact__card-content h3,
+.contact__card-action {
+  color: var(--text-main) !important;
+}
+
+.heading-sec__sub,
+.home-hero .text-primary,
+.about__content-details-para,
+.timeline-content p,
+.project__desc,
+.grad-card-desc,
+.rec-desc,
+.certificate__desc,
+.contact__card-content p {
+  color: var(--text-muted) !important;
+}
+
+.about__content-details-para strong,
+.project__desc strong,
+.grad-card-desc strong,
+.rec-desc strong,
+.certificate__desc strong {
+  color: var(--text-main) !important;
+}
+
+.about__photo-card,
+.about__narrative-box,
+.about__skills-container,
+.timeline-content,
+.project__card,
+.grad-card,
+.recommendation__card,
+.certificate__card,
+.contact__card {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  box-shadow: var(--shadow-card) !important;
+}
+
+.about__photo-overlay {
+  background: linear-gradient(to top, var(--bg-primary), transparent) !important;
+}
+
+.tech-tag,
+.project__tag {
+  color: var(--text-main) !important;
+  background: var(--tag-bg) !important;
+  border: 1px solid var(--tag-border) !important;
+}
+
+[data-theme="light"] .main-footer__brand-title {
+  background: linear-gradient(90deg, #0f172a, #475569);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme="light"] .main-footer__social-btn,
+[data-theme="light"] .certificate__verify-btn,
+[data-theme="light"] .rec-link-btn,
+[data-theme="light"] .grad-btn.secondary {
+  background: var(--tag-bg) !important;
+  border-color: var(--tag-border) !important;
+  color: var(--text-main) !important;
+}
+
+[data-theme="light"] .certificate__verify-btn:hover,
+[data-theme="light"] .rec-link-btn:hover {
+  background: var(--primary-btn) !important;
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .mouse {
+  border-color: var(--text-subtle);
+}
+
+[data-theme="light"] .mouse::before {
+  background-color: var(--text-main);
+}
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;

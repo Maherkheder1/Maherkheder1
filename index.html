@@ -10,7 +10,19 @@
     content="Software Engineer specializing in Laravel Backend, Custom WordPress Development, CRM Systems, and Deployment Infrastructure (Linux, Docker, Nginx, CI/CD)." />
   <meta name="keywords"
     content="Maher Kheder, Laravel Developer, WordPress Developer, PHP, Junior DevOps, Docker, Linux, Nginx, CI/CD, CRM Developer, Europe Remote" />
+  <!-- منع وميض الشاشة عند التحميل (Instant Theme Load) -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
 
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- تحميل Font Awesome بشكل غير متزامن لتسريع العرض الأول للصفحة (FCP) -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
   <link rel="stylesheet" href="css/style.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -55,6 +67,9 @@
             <a href="#contact" class="header__link"> Contact </a>
           </li>
         </ul>
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Switch Theme">
+          <i class="fas fa-sun"></i>
+        </button>
         <div class="header__main-ham-menu-cont">
           <img src="./assets/svg/ham-menu.svg" alt="hamburger menu" class="header__main-ham-menu" />
           <img src="./assets/svg/ham-menu-close.svg" alt="hamburger menu close"
@@ -115,7 +130,7 @@
       </div>
 
       <div class="home-hero__image-container">
-        <img src="./assets/png/profile.png" alt="Maher Kheder Profile Picture" class="home-hero__image" />
+        <img src="./assets/png/profile.png" alt="Maher Kheder Profile Picture" class="home-hero__image" fetchpriority="high" />
       </div>
     </div>
 
@@ -933,10 +948,7 @@
     </div>
   </div>
 </footer>
-
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script src="./index.js"></script>
+<script src="./index.js" defer></script>
 </body>
 
 </html>
