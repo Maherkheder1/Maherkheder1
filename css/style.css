@@ -33,14 +33,14 @@
 }
 
 [data-theme="light"] {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #ffffff;
-  --bg-gradient-1: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-  --bg-gradient-2: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-  --header-bg: rgba(255, 255, 255, 0.9);
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-gradient-1: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+  --bg-gradient-2: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  --header-bg: rgba(255, 255, 255, 0.92);
   --card-bg: #ffffff;
-  --card-hover-bg: #ffffff;
-  --card-border: rgba(15, 23, 42, 0.09);
+  --card-hover-bg: #f8fafc;
+  --card-border: rgba(15, 23, 42, 0.1);
   --text-main: #0f172a;
   --text-muted: #334155;
   --text-subtle: #64748b;
@@ -48,7 +48,7 @@
   --primary-btn: #2563eb;
   --tag-bg: #f1f5f9;
   --tag-border: #cbd5e1;
-  --shadow-card: 0 12px 30px rgba(15, 23, 42, 0.07);
+  --shadow-card: 0 15px 35px rgba(15, 23, 42, 0.08);
 }
 
 /* تسريع الرندر للأقسام السفلية (Performance Boost) */
@@ -76,6 +76,7 @@ section:not(.home-hero) {
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .theme-toggle-btn:hover {
@@ -84,7 +85,7 @@ section:not(.home-hero) {
   transform: rotate(15deg) scale(1.05);
 }
 
-/* ربط الأقسام والبطاقات بالمتغيرات لتعمل بسلاسة في الوضعين */
+/* ربط الأقسام والبطاقات بالمتغيرات الديناميكية */
 body {
   background-color: var(--bg-primary);
   color: var(--text-main);
@@ -136,6 +137,7 @@ body {
   background-image: var(--bg-gradient-2) !important;
 }
 
+/* ضمان أن كل العناوين الرئيسية والفرعية تصبح داكنة وواضحة في الـ Light Mode */
 .heading-sec__main,
 .home-hero .heading-primary,
 .about__quick-info h3,
