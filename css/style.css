@@ -566,17 +566,42 @@ textarea { resize: none; }
   background-image: var(--bg-gradient-1);
 }
 
-.certificates__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; margin-top: 4rem; }
+.certificates__grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+  gap: 3rem; 
+  margin-top: 4rem; 
+  align-items: stretch; /* يضمن تساوي ارتفاع كل الصناديق في نفس الصف */
+}
 
 .certificate__card {
-  background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px;
-  padding: 3rem; display: flex; flex-direction: column; justify-content: space-between; backdrop-filter: blur(12px); position: relative; overflow: hidden; transition: all 0.4s ease; box-shadow: var(--shadow-card);
+  background: var(--card-bg); 
+  border: 1px solid var(--card-border); 
+  border-radius: 16px;
+  padding: 3rem; 
+  display: flex; 
+  flex-direction: column; 
+  height: 100%; /* يتمدد ليأخذ كامل ارتفاع الصف المرن */
+  min-height: 420px; /* حد أدنى للارتفاع لإعطاء مظهر متناسق */
+  backdrop-filter: blur(12px); 
+  position: relative; 
+  transition: all 0.4s ease; 
+  box-shadow: var(--shadow-card);
 }
+
 .certificate__card::before {
   content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
   background: linear-gradient(90deg, var(--primary-btn), #2ecc71); opacity: 0; transition: opacity 0.3s ease;
+  border-radius: 16px 16px 0 0; /* للحفاظ على استدارة الحافة العلوية بعد إزالة overflow: hidden */
 }
-.certificate__card:hover { transform: translateY(-8px); background: var(--card-hover-bg); border-color: var(--card-border); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); }
+
+.certificate__card:hover { 
+  transform: translateY(-8px); 
+  background: var(--card-hover-bg); 
+  border-color: var(--card-border); 
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); 
+}
+
 .certificate__card:hover::before { opacity: 1; }
 
 .certificate__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
@@ -588,12 +613,21 @@ textarea { resize: none; }
 .certificate__date { font-size: 1.2rem; font-weight: 600; color: var(--text-subtle); background: var(--tag-bg); padding: 5px 12px; border-radius: 20px; }
 .certificate__title { font-size: 1.9rem; color: var(--text-main); font-weight: 700; margin-bottom: 0.5rem; }
 .certificate__issuer { font-size: 1.4rem; color: var(--accent-blue); font-weight: 600; margin-bottom: 1.5rem; }
-.certificate__desc { font-size: 1.35rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 2rem; }
+
+.certificate__desc { 
+  font-size: 1.35rem; 
+  color: var(--text-muted); 
+  line-height: 1.7; 
+  margin-bottom: 2.5rem; 
+  flex-grow: 1; /* يدفع كل ما بعد الوصف (الأوسمة والزر) إلى أسفل البطاقة تلقائياً */
+}
 
 .certificate__verify-btn {
   display: inline-flex; align-items: center; gap: 10px; font-size: 1.35rem; font-weight: 600; color: var(--text-main);
-  background: var(--tag-bg); border: 1px solid var(--tag-border); padding: 10px 20px; border-radius: 8px; transition: all 0.3s ease; width: 100%; justify-content: center;
+  background: var(--tag-bg); border: 1px solid var(--tag-border); padding: 12px 20px; border-radius: 8px; transition: all 0.3s ease; width: 100%; justify-content: center;
+  margin-top: 1rem; /* مسافة أمان فوق الزر */
 }
+
 .certificate__verify-btn:hover { background: var(--primary-btn) !important; color: #ffffff !important; border-color: var(--primary-btn) !important; box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4); }
 
 /* ==========================================
