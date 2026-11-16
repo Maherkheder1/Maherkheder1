@@ -8,7 +8,13 @@
     <title>Case Study | Laravel CRM System</title>
     <meta name="description"
         content="Case study of Laravel CRM System with user management, client tracking, and bilingual support" />
-
+    <!-- منع وميض الشاشة وتحميل الثيم فوراً -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -20,59 +26,53 @@
 
 <body>
     <header class="header">
-        <div class="header__content">
-            <div class="header__logo-container">
-                <div class="header__logo-img-cont">
-                    <img src="./assets/png/profile-pic.png" alt="Maher Kheder Logo Image" class="header__logo-img" />
-                </div>
-                <span class="header__logo-sub">Maher Kheder</span>
-            </div>
-            <div class="header__main">
-                <ul class="header__links">
-                    <li class="header__link-wrapper">
-                        <a href="./index.html" class="header__link"> Home </a>
-                    </li>
-                    <li class="header__link-wrapper">
-                        <a href="./index.html#about" class="header__link">About </a>
-                    </li>
-                    <li class="header__link-wrapper">
-                        <a href="./index.html#projects" class="header__link">
-                            Projects
-                        </a>
-                    </li>
-                    <li class="header__link-wrapper">
-                        <a href="./index.html#contact" class="header__link"> Contact </a>
-                    </li>
-                </ul>
-                <div class="header__main-ham-menu-cont">
-                    <img src="./assets/svg/ham-menu.svg" alt="hamburger menu" class="header__main-ham-menu" />
-                    <img src="./assets/svg/ham-menu-close.svg" alt="hamburger menu close"
-                        class="header__main-ham-menu-close d-none" />
-                </div>
-            </div>
+    <div class="header__content">
+      <div class="header__logo-container">
+        <div class="header__logo-img-cont">
+          <img src="./assets/png/profile-pic.png" alt="Maher Kheder Logo" class="header__logo-img" />
         </div>
-        <div class="header__sm-menu">
-            <div class="header__sm-menu-content">
-                <ul class="header__sm-menu-links">
-                    <li class="header__sm-menu-link">
-                        <a href="./index.html"> Home </a>
-                    </li>
+        <span class="header__logo-sub">Maher Kheder</span>
+      </div>
 
-                    <li class="header__sm-menu-link">
-                        <a href="./index.html#about"> About </a>
-                    </li>
+      <div class="header__main">
+        <ul class="header__links">
+          <li class="header__link-wrapper"><a href="./index.html" class="header__link">Home</a></li>
+          <li class="header__link-wrapper"><a href="./index.html#about" class="header__link">About</a></li>
+          <li class="header__link-wrapper"><a href="./index.html#experience" class="header__link">Experience</a></li>
+          <li class="header__link-wrapper"><a href="./index.html#projects" class="header__link">Projects</a></li>
+          <li class="header__link-wrapper"><a href="./index.html#graduation-project" class="header__link">Graduation</a></li>
+          <li class="header__link-wrapper"><a href="./index.html#recommendations" class="header__link">Endorsements</a></li>
+          <li class="header__link-wrapper"><a href="./index.html#certificates" class="header__link">Certificates</a></li>
+          <li class="header__link-wrapper"><a href="./index.html#contact" class="header__link">Contact</a></li>
+        </ul>
 
-                    <li class="header__sm-menu-link">
-                        <a href="./index.html#projects"> Projects </a>
-                    </li>
+        <!-- زر تبديل الوضع الليلي والنهاري -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Switch Theme">
+          <i class="fas fa-sun"></i>
+        </button>
 
-                    <li class="header__sm-menu-link">
-                        <a href="./index.html#contact"> Contact </a>
-                    </li>
-                </ul>
-            </div>
+        <div class="header__main-ham-menu-cont">
+          <img src="./assets/svg/ham-menu.svg" alt="hamburger menu" class="header__main-ham-menu" />
+          <img src="./assets/svg/ham-menu-close.svg" alt="hamburger menu close" class="header__main-ham-menu-close d-none" />
         </div>
-    </header>
+      </div>
+    </div>
+    
+    <div class="header__sm-menu">
+      <div class="header__sm-menu-content">
+        <ul class="header__sm-menu-links">
+          <li class="header__sm-menu-link"><a href="./index.html"> Home </a></li>
+          <li class="header__sm-menu-link"><a href="./index.html#about"> About </a></li>
+          <li class="header__sm-menu-link"><a href="./index.html#experience"> Experience </a></li>
+          <li class="header__sm-menu-link"><a href="./index.html#projects"> Projects </a></li>
+          <li class="header__sm-menu-link"><a href="./index.html#graduation-project"> Graduation </a></li>
+          <li class="header__sm-menu-link"><a href="./index.html#recommendations"> Endorsements </a></li>
+          <li class="header__sm-menu-link"><a href="./index.html#certificates"> Certificates </a></li>
+          <li class="header__sm-menu-link"><a href="./index.html#contact"> Contact </a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
     <section class="project-cs-hero">
         <div class="project-cs-hero__content">
             <h1 class="heading-primary">Laravel CRM System</h1>
@@ -264,45 +264,41 @@
         </div>
     </section>
     <footer class="main-footer">
-        <div class="main-container">
-            <div class="main-footer__upper">
-                <div class="main-footer__row main-footer__row-1">
-                    <h2 class="heading heading-sm main-footer__heading-sm">
-                        <span>Social</span>
-                    </h2>
-                    <div class="main-footer__social-cont">
-                        <a target="_blank" rel="noreferrer" href="https://linkedin.com/in/maher-kheder-026996357">
-                            <img class="main-footer__icon" src="./assets/png/linkedin-ico.png" alt="LinkedIn icon" />
-                        </a>
-                        <a target="_blank" rel="noreferrer" href="https://github.com/Maherkheder1">
-                            <img class="main-footer__icon" src="./assets/png/github-ico.png" alt="GitHub icon" />
-                        </a>
-                        <a target="_blank" rel="noreferrer" href="mailto:maher.h.kheder@gmail.com">
-                            <img class="main-footer__icon" src="./assets/png/email-ico.png" alt="Email icon" />
-                        </a>
-                        <a href="MKhederResume.pdf" download class="main-footer__icon-link">
-                            <img class="main-footer__icon" src="./assets/png/cv-ico.png" alt="CV Download icon" />
-                        </a>
-                    </div>
-                </div>
-                <div class="main-footer__row main-footer__row-2">
-                    <h4 class="heading heading-sm text-lt">Maher Kheder</h4>
-                    <p class="main-footer__short-desc">
-                        Laravel Backend Developer specializing in RESTful APIs,
-                        database design, and scalable web applications
-                    </p>
-                </div>
-            </div>
-
-            <div class="main-footer__lower">
-                &copy; Copyright
-                <script>document.write(new Date().getFullYear())</script>.
-
-                <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/maher-kheder-026996357/">Maher
-                    Kheder</a>
-            </div>
+    <div class="main-container">
+      <div class="main-footer__upper">
+        <div class="main-footer__row main-footer__row-2">
+          <h4 class="heading heading-sm text-lt main-footer__brand-title">MAHER KHEDER</h4>
+          <p class="main-footer__short-desc">
+            Laravel Backend Developer specializing in RESTful APIs, database design, and scalable web applications
+          </p>
         </div>
-    </footer>
+        <div class="main-footer__row main-footer__row-1">
+          <h2 class="heading heading-sm main-footer__heading-sm">
+            <span>Social</span>
+          </h2>
+          <div class="main-footer__social-cont">
+            <a target="_blank" rel="noreferrer" href="https://linkedin.com/in/maher-kheder-026996357" class="main-footer__social-btn linkedin" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a target="_blank" rel="noreferrer" href="https://github.com/Maherkheder1" class="main-footer__social-btn github" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a target="_blank" rel="noreferrer" href="mailto:maher.h.kheder@gmail.com" class="main-footer__social-btn email" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="MKhederResume.pdf" download class="main-footer__social-btn cv" title="Download CV">
+              <i class="fas fa-file-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-footer__lower">
+        &copy; Copyright 2026. Made by
+        <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/maher-kheder-026996357/">MAHER KHEDER</a>
+      </div>
+    </div>
+  </footer>
     <script src="./index.js"></script>
 </body>
 
