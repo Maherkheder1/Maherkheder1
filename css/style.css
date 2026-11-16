@@ -440,6 +440,9 @@ textarea { resize: none; }
   color: var(--accent-blue); background: rgba(56, 189, 248, 0.1); padding: 6px 14px; border-radius: 20px;
   border: 1px solid rgba(56, 189, 248, 0.2); margin-bottom: 1.5rem;
 }
+.timeline-date {
+  font-size: 1.3rem;
+}
 
 .timeline-content {
   background: var(--card-bg); border: 1px solid var(--card-border);
